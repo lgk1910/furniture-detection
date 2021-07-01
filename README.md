@@ -20,6 +20,18 @@ pip install -qr requirements.txt
 - Each folder contains 2 folders namely `images` and `labels`:
   - `images/` contains .jpg image files.
   - `labels/` contains corresponding .txt label files.
+- The .txt label file should be in YOLO format as below:
+ ```
+  Label_ID_1 X_CENTER_NORM Y_CENTER_NORM WIDTH_NORM HEIGHT_NORM
+  Label_ID_2 X_CENTER_NORM Y_CENTER_NORM WIDTH_NORM HEIGHT_NORM
+ ```
+ with 
+ ```
+  X_CENTER_NORM = X_CENTER_ABS/IMAGE_WIDTH
+  Y_CENTER_NORM = Y_CENTER_ABS/IMAGE_HEIGHT
+  WIDTH_NORM = WIDTH_OF_LABEL_ABS/IMAGE_WIDTH
+  HEIGHT_NORM = HEIGHT_OF_LABEL_ABS/IMAGE_HEIGHT
+ ```
 - Note: The image and its corresponding label must have the same name, i.e 'img1.jpg' has 'img1.txt' as its corresponding label.
 - Modify the attributes `nc` and `names` in `data.yaml` file to match your dataset description
 
