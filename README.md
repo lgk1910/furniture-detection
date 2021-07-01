@@ -23,5 +23,5 @@ pip install -qr requirements.txt
 - Note: The image and its corresponding label must have the same name, i.e 'img1.jpg' has 'img1.txt' as its corresponding label.
 - Modify the attributes `nc` and `names` in `data.yaml` file to match your dataset description
 
-## Follow the codes in notebooks to train your model
+## Follow the codes in the notebook (.ipynb file) to train your model
 The notebook is used to demonstrate the training process more efficiently, please follow the instructions in the notebook to train your model without facing any unwanted issues.
